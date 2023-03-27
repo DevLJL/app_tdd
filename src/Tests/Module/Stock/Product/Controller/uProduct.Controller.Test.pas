@@ -3,37 +3,37 @@ unit uProduct.Controller.Test;
 interface
 
 uses
-  TestFramework,
-  uProduct.Controller.Interfaces,
-  uProduct.DTO;
+  DUnitX.TestFramework,
+  uProduct.DTO,
+  uProduct.Controller.Interfaces;
 
 type
-  TProductControllerTest = class(TTestCase)
-  protected
-    procedure SetUp; override;
-    procedure TearDown; override;
+  [TestFixture]
+  TProductControllerTest = class(TObject)
   private
     FController: IProductController;
     function GenerateProductDTO: TProductDTO;
-  published
-    procedure Store;
-    procedure Update;
-    procedure Delete;
-    procedure Show;
-    procedure Index;
+  public
+    [Setup]    procedure Setup;
+    [TearDown] procedure TearDown;
+    [Test] procedure Store;
+    [Test] procedure Update;
+    [Test] procedure Delete;
+    [Test] procedure Show;
+    [Test] procedure Index;
   end;
 
 implementation
 
 uses
-  uController.Factory,
-  uEither,
-  uHlp,
-  System.SysUtils,
-  uConnection.Factory,
-  uIndexResult,
-  uTrans,
   uSmartPointer,
+  uEither,
+  System.SysUtils,
+  uTrans,
+  uHlp,
+  uIndexResult,
+  uConnection.Factory,
+  uController.Factory,
   REST.Json;
 
 { TProductControllerTest }
@@ -52,7 +52,7 @@ begin
   FController.Delete(lStoredId.Right);
 
   lFound := FController.Show(lStoredId.Right);
-  Check(not Assigned(lFound.Value));
+  Assert.IsTrue(not Assigned(lFound.Value));
 end;
 
 function TProductControllerTest.GenerateProductDTO: TProductDTO;
@@ -80,7 +80,7 @@ begin
     end;
 
     lIndexResult := FController.Index;
-    Check(lIndexResult.Data.DataSet.RecordCount = 10);
+    Assert.IsTrue(lIndexResult.Data.DataSet.RecordCount = 10);
   finally
     // Limpar dados
     TConnectionFactory.Make.MakeQry.ExecSQL(L_DELETE_ALL);
@@ -107,7 +107,7 @@ begin
 
   lOutPut := FController.Show(lStoredId.Right);
   lInput.Value.id := lStoredId.Right;
-  Check(TJson.ObjectToJsonString(lOutPut) = TJson.ObjectToJsonString(lInput));
+  Assert.IsTrue(TJson.ObjectToJsonString(lOutPut) = TJson.ObjectToJsonString(lInput));
 
   // Limpar dados
   FController.Delete(lStoredId.Right);
@@ -121,7 +121,7 @@ begin
   lInput    := Self.GenerateProductDTO;
   lStoredId := FController.Store(lInput);
   if not lStoredId.Match then
-    Check(false, lStoredId.Left);
+    Assert.IsTrue(false, lStoredId.Left);
 
   // Limpar dados
   FController.Delete(lStoredId.Right);
@@ -150,13 +150,13 @@ begin
   lInputUpdate := Self.GenerateProductDTO;
   lStoredId := FController.Update(lInputUpdate.Value, lStoredId.Right);
   if not lStoredId.Match then
-    Check(false, lStoredId.Left);
+    Assert.IsTrue(false, lStoredId.Left);
 
   lFound := FController.Show(lStoredId.Right);
 
   lInput.Value.id := lStoredId.Right;
-  Check(lInput.Value.id = lFound.Value.id);
-  Check(TJson.ObjectToJsonString(lFound) <> TJson.ObjectToJsonString(lInput));
+  Assert.IsTrue(lInput.Value.id = lFound.Value.id);
+  Assert.IsTrue(TJson.ObjectToJsonString(lFound) <> TJson.ObjectToJsonString(lInput));
 
   // Limpar dados
   FController.Delete(lFound.Value.id);
@@ -164,6 +164,6 @@ end;
 
 
 initialization
-  RegisterTest(TProductControllerTest.Suite);
+  TDUnitX.RegisterTestFixture(TProductControllerTest);
 
 end.

@@ -89,6 +89,10 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Helper.pas"/>
+        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Impl.pas"/>
+        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.pas"/>
+        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Util.pas"/>
         <DCCReference Include="Vendor\dataset-serialize\src\DataSet.Serialize.Config.pas"/>
         <DCCReference Include="Vendor\dataset-serialize\src\DataSet.Serialize.Consts.pas"/>
         <DCCReference Include="Vendor\dataset-serialize\src\DataSet.Serialize.Export.pas"/>
@@ -97,56 +101,52 @@
         <DCCReference Include="Vendor\dataset-serialize\src\DataSet.Serialize.pas"/>
         <DCCReference Include="Vendor\dataset-serialize\src\DataSet.Serialize.UpdatedStatus.pas"/>
         <DCCReference Include="Vendor\dataset-serialize\src\DataSet.Serialize.Utils.pas"/>
+        <DCCReference Include="Vendor\Either\src\uEither.pas">
+            <Form>/ ------</Form>
+        </DCCReference>
+        <DCCReference Include="Vendor\SmartPointer\src\uSmartPointer.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\uZLConnection.Interfaces.pas"/>
         <DCCReference Include="Vendor\ZLConnection\src\uZLConnection.Types.pas"/>
         <DCCReference Include="Vendor\ZLConnection\src\uZLMemTable.Interfaces.pas"/>
         <DCCReference Include="Vendor\ZLConnection\src\uZLMigration.pas"/>
         <DCCReference Include="Vendor\ZLConnection\src\uZLQry.Interfaces.pas"/>
         <DCCReference Include="Vendor\ZLConnection\src\uZLScript.Interfaces.pas"/>
         <DCCReference Include="Vendor\ZLConnection\src\FireDAC\uZLConnection.FireDAC.pas"/>
-        <DCCReference Include="Vendor\ZLConnection\src\uZLConnection.Interfaces.pas"/>
         <DCCReference Include="Vendor\ZLConnection\src\FireDAC\uZLMemTable.FireDAC.pas"/>
         <DCCReference Include="Vendor\ZLConnection\src\FireDAC\uZLQry.FireDAC.pas"/>
         <DCCReference Include="Vendor\ZLConnection\src\FireDAC\uZLScript.FireDAC.pas"/>
-        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Helper.pas"/>
-        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Impl.pas"/>
-        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.pas"/>
-        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Util.pas"/>
-        <DCCReference Include="Vendor\SmartPointer\src\uSmartPointer.pas"/>
-        <DCCReference Include="Vendor\Either\src\uEither.pas">
-            <Form>/ ------</Form>
-        </DCCReference>
+        <DCCReference Include="Module\Stock\Product\Controller\uProduct.Controller.pas"/>
+        <DCCReference Include="Module\Stock\Product\Repository\uProduct.Repository.Interfaces.pas"/>
+        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Delete.UseCase.pas"/>
+        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Index.UseCase.pas"/>
+        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Show.UseCase.pas"/>
+        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Store.UseCase.pas"/>
+        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Update.UseCase.pas"/>
+        <DCCReference Include="Module\Stock\Product\DTO\uProduct.DTO.pas"/>
+        <DCCReference Include="Module\Stock\Product\Mapper\uProduct.Mapper.pas"/>
+        <DCCReference Include="Module\Stock\Product\Domain\Entity\uProduct.pas"/>
+        <DCCReference Include="Module\Stock\Product\Repository\uProduct.Repository.pas"/>
+        <DCCReference Include="Module\Stock\Product\Controller\uProduct.Controller.Interfaces.pas"/>
+        <DCCReference Include="Shared\Repository\uRepository.Factory.pas"/>
         <DCCReference Include="Shared\Environment\uEnv.pas"/>
+        <DCCReference Include="Shared\Util\uHlp.pas"/>
+        <DCCReference Include="Shared\Util\uIndexResult.pas"/>
+        <DCCReference Include="Shared\Config\Migrations\u2023_03_27_07_32_00_create_product_table.migration.pas"/>
+        <DCCReference Include="Shared\Exception\uApplication.Exception.pas"/>
+        <DCCReference Include="Shared\DTO\uBase.DTO.pas"/>
+        <DCCReference Include="Shared\Domain\Entity\uBase.Entity.pas"/>
+        <DCCReference Include="Shared\Config\uBase.Migration.pas"/>
+        <DCCReference Include="Shared\Config\uConnection.Factory.pas"/>
+        <DCCReference Include="Shared\Config\uConnMigration.pas"/>
+        <DCCReference Include="Shared\Controller\uController.Factory.pas"/>
+        <DCCReference Include="Shared\Exception\Entity\uEntityValidation.Exception.pas"/>
+        <DCCReference Include="Shared\Config\uMemTable.Factory.pas"/>
         <DCCReference Include="Shared\Config\uSession.DTM.pas">
             <Form>SessionDTM</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="tests\Module\Stock\Product\Controller\uProduct.Controller.Test.pas"/>
-        <DCCReference Include="Module\Stock\Product\Controller\uProduct.Controller.Interfaces.pas"/>
-        <DCCReference Include="Shared\DTO\uBase.DTO.pas"/>
-        <DCCReference Include="Module\Stock\Product\DTO\uProduct.DTO.pas"/>
-        <DCCReference Include="Shared\Controller\uController.Factory.pas"/>
-        <DCCReference Include="Module\Stock\Product\Controller\uProduct.Controller.pas"/>
-        <DCCReference Include="Module\Stock\Product\Repository\uProduct.Repository.Interfaces.pas"/>
-        <DCCReference Include="Shared\Repository\uRepository.Factory.pas"/>
-        <DCCReference Include="Module\Stock\Product\Repository\uProduct.Repository.pas"/>
-        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Store.UseCase.pas"/>
-        <DCCReference Include="Shared\Exception\Entity\uEntityValidation.Exception.pas"/>
-        <DCCReference Include="Shared\Exception\uApplication.Exception.pas"/>
-        <DCCReference Include="Module\Stock\Product\Domain\Entity\uProduct.pas"/>
-        <DCCReference Include="Shared\Domain\Entity\uBase.Entity.pas"/>
-        <DCCReference Include="Module\Stock\Product\Mapper\uProduct.Mapper.pas"/>
-        <DCCReference Include="Shared\Config\uConnection.Factory.pas"/>
-        <DCCReference Include="Shared\Util\uHlp.pas"/>
-        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Delete.UseCase.pas"/>
-        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Show.UseCase.pas"/>
-        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Update.UseCase.pas"/>
-        <DCCReference Include="Shared\Util\uIndexResult.pas"/>
-        <DCCReference Include="Shared\Config\uMemTable.Factory.pas"/>
-        <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Index.UseCase.pas"/>
         <DCCReference Include="Shared\Resources\Language\uTrans.pas"/>
-        <DCCReference Include="Shared\Config\uConnMigration.pas"/>
-        <DCCReference Include="Shared\Config\Migrations\u2023_03_27_07_32_00_create_product_table.migration.pas"/>
-        <DCCReference Include="Shared\Config\uBase.Migration.pas"/>
+        <DCCReference Include="Tests\Module\Stock\Product\Controller\uProduct.Controller.Test.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -201,27 +201,12 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -600,12 +585,27 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
