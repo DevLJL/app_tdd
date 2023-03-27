@@ -8,7 +8,7 @@ uses
   uProduct.Controller.Interfaces;
 
 type
-  [TestFixture]
+  [CategoryAttribute('TProductControllerTest')]
   TProductControllerTest = class(TObject)
   private
     FController: IProductController;
