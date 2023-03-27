@@ -1,24 +1,12 @@
 program crud_test;
-{
 
-  Delphi DUnit Test Project
-  -------------------------
-  This project contains the DUnit test framework and the GUI/Console test runners.
-  Add "CONSOLE_TESTRUNNER" to the conditional defines entry in the project options
-  to use the console test runner.  Otherwise the GUI test runner will be used by
-  default.
-
-}
-
+//{$DEFINE CONSOLE_TESTRUNNER}
 {$IFDEF CONSOLE_TESTRUNNER}
 {$APPTYPE CONSOLE}
 {$ENDIF}
 
 uses
   DUnitTestRunner,
-  // ---------------------------------------------------------------------------
-  // Vendor
-  // ---------------------------------------------------------------------------
   DataSet.Serialize.Config in 'Vendor\dataset-serialize\src\DataSet.Serialize.Config.pas',
   DataSet.Serialize.Consts in 'Vendor\dataset-serialize\src\DataSet.Serialize.Consts.pas',
   DataSet.Serialize.Export in 'Vendor\dataset-serialize\src\DataSet.Serialize.Export.pas',
@@ -42,8 +30,7 @@ uses
   DataSetConverter4D in 'Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.pas',
   DataSetConverter4D.Util in 'Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Util.pas',
   uSmartPointer in 'Vendor\SmartPointer\src\uSmartPointer.pas',
-  uEither in 'Vendor\Either\src\uEither.pas',
-  // ---------------------------------------------------------------------------
+  uEither in 'Vendor\Either\src\uEither.pas' {/ ------},
   uEnv in 'Shared\Environment\uEnv.pas',
   uSession.DTM in 'Shared\Config\uSession.DTM.pas' {SessionDTM: TDataModule},
   uProduct.Controller.Test in 'tests\Module\Stock\Product\Controller\uProduct.Controller.Test.pas',
