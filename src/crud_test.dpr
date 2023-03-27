@@ -16,6 +16,9 @@ program crud_test;
 
 uses
   DUnitTestRunner,
+  // ---------------------------------------------------------------------------
+  // Vendor
+  // ---------------------------------------------------------------------------
   DataSet.Serialize.Config in 'Vendor\dataset-serialize\src\DataSet.Serialize.Config.pas',
   DataSet.Serialize.Consts in 'Vendor\dataset-serialize\src\DataSet.Serialize.Consts.pas',
   DataSet.Serialize.Export in 'Vendor\dataset-serialize\src\DataSet.Serialize.Export.pas',
@@ -39,13 +42,14 @@ uses
   DataSetConverter4D in 'Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.pas',
   DataSetConverter4D.Util in 'Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Util.pas',
   uSmartPointer in 'Vendor\SmartPointer\src\uSmartPointer.pas',
+  uEither in 'Vendor\Either\src\uEither.pas',
+  // ---------------------------------------------------------------------------
   uEnv in 'Shared\Environment\uEnv.pas',
   uSession.DTM in 'Shared\Config\uSession.DTM.pas' {SessionDTM: TDataModule},
   uProduct.Controller.Test in 'tests\Module\Stock\Product\Controller\uProduct.Controller.Test.pas',
   uProduct.Controller.Interfaces in 'Module\Stock\Product\Controller\uProduct.Controller.Interfaces.pas',
   uBase.DTO in 'Shared\DTO\uBase.DTO.pas',
   uProduct.DTO in 'Module\Stock\Product\DTO\uProduct.DTO.pas',
-  uEither in 'Shared\Util\uEither.pas',
   uController.Factory in 'Shared\Controller\uController.Factory.pas',
   uProduct.Controller in 'Module\Stock\Product\Controller\uProduct.Controller.pas',
   uProduct.Repository.Interfaces in 'Module\Stock\Product\Repository\uProduct.Repository.Interfaces.pas',
