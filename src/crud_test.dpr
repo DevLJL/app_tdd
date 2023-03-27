@@ -61,18 +61,18 @@ uses
   uProduct in 'Module\Stock\Product\Domain\Entity\uProduct.pas',
   uBase.Entity in 'Shared\Domain\Entity\uBase.Entity.pas',
   uProduct.Mapper in 'Module\Stock\Product\Mapper\uProduct.Mapper.pas',
-  uConnection.Factory in 'Shared\Connection\uConnection.Factory.pas',
+  uConnection.Factory in 'Shared\Config\uConnection.Factory.pas',
   uHlp in 'Shared\Util\uHlp.pas',
   uProduct.Delete.UseCase in 'Module\Stock\Product\UseCase\uProduct.Delete.UseCase.pas',
   uProduct.Show.UseCase in 'Module\Stock\Product\UseCase\uProduct.Show.UseCase.pas',
   uProduct.Update.UseCase in 'Module\Stock\Product\UseCase\uProduct.Update.UseCase.pas',
   uIndexResult in 'Shared\Util\uIndexResult.pas',
-  uMemTable.Factory in 'Shared\Connection\uMemTable.Factory.pas',
+  uMemTable.Factory in 'Shared\Config\uMemTable.Factory.pas',
   uProduct.Index.UseCase in 'Module\Stock\Product\UseCase\uProduct.Index.UseCase.pas',
   uTrans in 'Shared\Resources\Language\uTrans.pas',
-  uConnMigration in 'Shared\Connection\uConnMigration.pas',
-  u2023_03_27_07_32_00_create_product_table.migration in 'Shared\Connection\Migrations\u2023_03_27_07_32_00_create_product_table.migration.pas',
-  uBase.Migration in 'Shared\Connection\uBase.Migration.pas';
+  uConnMigration in 'Shared\Config\uConnMigration.pas',
+  u2023_03_27_07_32_00_create_product_table.migration in 'Shared\Config\Migrations\u2023_03_27_07_32_00_create_product_table.migration.pas',
+  uBase.Migration in 'Shared\Config\uBase.Migration.pas';
 
 {R *.RES}
 
