@@ -27,7 +27,8 @@
 #
 
 # Delphi compiler-generated binaries (safe to delete)
-output/dcu
+Vendor
+Output/dcu
 env.ini
 dunit.ini
 *.exe
