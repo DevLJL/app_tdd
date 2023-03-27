@@ -27,9 +27,6 @@
 #
 
 # Delphi compiler-generated binaries (safe to delete)
-output/dcu
-env.ini
-dunit.ini
 *.exe
 *.dll
 *.bpl

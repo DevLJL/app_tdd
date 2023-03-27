@@ -89,6 +89,29 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="Vendor\DatasetSerialize\src\DataSet.Serialize.Config.pas"/>
+        <DCCReference Include="Vendor\DatasetSerialize\src\DataSet.Serialize.Consts.pas"/>
+        <DCCReference Include="Vendor\DatasetSerialize\src\DataSet.Serialize.Export.pas"/>
+        <DCCReference Include="Vendor\DatasetSerialize\src\DataSet.Serialize.Import.pas"/>
+        <DCCReference Include="Vendor\DatasetSerialize\src\DataSet.Serialize.Language.pas"/>
+        <DCCReference Include="Vendor\DatasetSerialize\src\DataSet.Serialize.pas"/>
+        <DCCReference Include="Vendor\DatasetSerialize\src\DataSet.Serialize.UpdatedStatus.pas"/>
+        <DCCReference Include="Vendor\DatasetSerialize\src\DataSet.Serialize.Utils.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\uZLConnection.Types.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\uZLMemTable.Interfaces.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\uZLMigration.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\uZLQry.Interfaces.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\uZLScript.Interfaces.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\FireDAC\uZLConnection.FireDAC.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\uZLConnection.Interfaces.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\FireDAC\uZLMemTable.FireDAC.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\FireDAC\uZLQry.FireDAC.pas"/>
+        <DCCReference Include="Vendor\ZLConnection\src\FireDAC\uZLScript.FireDAC.pas"/>
+        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Helper.pas"/>
+        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Impl.pas"/>
+        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.pas"/>
+        <DCCReference Include="Vendor\DataSetConverter4Delphi\src\DataSetConverter4D.Util.pas"/>
+        <DCCReference Include="Vendor\SmartPointer\src\uSmartPointer.pas"/>
         <DCCReference Include="Shared\Environment\uEnv.pas"/>
         <DCCReference Include="Shared\Config\uSession.DTM.pas">
             <Form>SessionDTM</Form>
@@ -111,14 +134,6 @@
         <DCCReference Include="Shared\Domain\Entity\uBase.Entity.pas"/>
         <DCCReference Include="Module\Stock\Product\Mapper\uProduct.Mapper.pas"/>
         <DCCReference Include="Shared\Connection\uConnection.Factory.pas"/>
-        <DCCReference Include="vendor\DatasetSerialize\DataSet.Serialize.Config.pas"/>
-        <DCCReference Include="vendor\DatasetSerialize\DataSet.Serialize.Consts.pas"/>
-        <DCCReference Include="vendor\DatasetSerialize\DataSet.Serialize.Export.pas"/>
-        <DCCReference Include="vendor\DatasetSerialize\DataSet.Serialize.Import.pas"/>
-        <DCCReference Include="vendor\DatasetSerialize\DataSet.Serialize.Language.pas"/>
-        <DCCReference Include="vendor\DatasetSerialize\DataSet.Serialize.pas"/>
-        <DCCReference Include="vendor\DatasetSerialize\DataSet.Serialize.UpdatedStatus.pas"/>
-        <DCCReference Include="vendor\DatasetSerialize\DataSet.Serialize.Utils.pas"/>
         <DCCReference Include="Shared\Util\uHlp.pas"/>
         <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Delete.UseCase.pas"/>
         <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Show.UseCase.pas"/>
@@ -127,13 +142,6 @@
         <DCCReference Include="Shared\Connection\uMemTable.Factory.pas"/>
         <DCCReference Include="Module\Stock\Product\UseCase\uProduct.Index.UseCase.pas"/>
         <DCCReference Include="Shared\Resources\Language\uTrans.pas"/>
-        <DCCReference Include="vendor\DataSetConverter4Delphi\DataSetConverter4D.Helper.pas"/>
-        <DCCReference Include="vendor\DataSetConverter4Delphi\DataSetConverter4D.Impl.pas"/>
-        <DCCReference Include="vendor\DataSetConverter4Delphi\DataSetConverter4D.pas"/>
-        <DCCReference Include="vendor\DataSetConverter4Delphi\DataSetConverter4D.Util.pas"/>
-        <DCCReference Include="Shared\Util\uSmartPointer.pas">
-            <Form>R *.RES</Form>
-        </DCCReference>
         <DCCReference Include="Shared\Connection\uConnMigration.pas"/>
         <DCCReference Include="Shared\Connection\Migrations\u2023_03_27_07_32_00_create_product_table.migration.pas"/>
         <DCCReference Include="Shared\Connection\uBase.Migration.pas"/>
@@ -191,12 +199,27 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectOSXResource">
@@ -575,27 +598,12 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="DependencyModule">
-                    <Platform Name="Win32">
-                        <Operation>0</Operation>
-                        <Extensions>.dll;.bpl</Extensions>
-                    </Platform>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
                     <Platform Name="iOSDevice64">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="OSX32">
-                        <RemoteDir>Contents\MacOS</RemoteDir>
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                     <Platform Name="iOSDevice32">
                         <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
-                    </Platform>
-                    <Platform Name="iOSSimulator">
-                        <Operation>1</Operation>
-                        <Extensions>.dylib</Extensions>
                     </Platform>
                 </DeployClass>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
