@@ -73,6 +73,8 @@ var
   logger : ITestLogger;
   nunitLogger : ITestLogger;
 begin
+  ReportMemoryLeaksOnShutdown := true;
+  SessionDTM := TSessionDTM.Create(nil);
 {$IFDEF TESTINSIGHT}
   TestInsight.DUnitX.RunRegisteredTests;
   exit;
@@ -110,5 +112,6 @@ begin
     on E: Exception do
       System.Writeln(E.ClassName, ': ', E.Message);
   end;
+  SessionDTM.Free;
 end.
 
