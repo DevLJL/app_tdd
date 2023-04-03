@@ -1,35 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<test-results name="C:\Infarma\study_and_tests\app_tdd\src\Output\exe\crud_test.exe" total="5" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2023-04-03" time="0.135">
+<test-results name="C:\Infarma\study_and_tests\app_tdd\src\Output\exe\crud_test.exe" total="1" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2023-04-03" time="0.024">
   <culture-info current-culture="en" current-uiculture="en" />
-  <test-suite type="Assembly" name="crud_test.exe" executed="true" result="Success" success="True" time="0.135" asserts="0">
+  <test-suite type="Assembly" name="crud_test.exe" executed="true" result="Success" success="True" time="0.024" asserts="0">
     <results>
-        <test-suite type="Namespace" name="uProduct" executed="true" result="Success" success="True" time="0.135" asserts="0" >
+        <test-suite type="Namespace" name="uProduct" executed="true" result="Success" success="True" time="0.023" asserts="0" >
           <results>
-              <test-suite type="Fixture" name="TProductControllerTest" executed="True" result="Success" success="True" time="0.135" >
+              <test-suite type="Fixture" name="TProductControllerTest" executed="True" result="Success" success="True" time="0.023" >
                 <results>
-                  <test-case name="TestStore" executed="True" result="Success" success="True" time="0.016" asserts="0" >
+                  <test-case name="TestStore" executed="True" result="Success" success="True" time="0.015" asserts="0" >
                     <categories>
                       <category name="TProductControllerTest.TestStore" />
-                    </categories>
-                  </test-case>
-                  <test-case name="TestUpdate" executed="True" result="Success" success="True" time="0.015" asserts="0" >
-                    <categories>
-                      <category name="TProductControllerTest.TestUpdate" />
-                    </categories>
-                  </test-case>
-                  <test-case name="TestDelete" executed="True" result="Success" success="True" time="0.012" asserts="0" >
-                    <categories>
-                      <category name="TProductControllerTest.TestDelete" />
-                    </categories>
-                  </test-case>
-                  <test-case name="TestShow" executed="True" result="Success" success="True" time="0.011" asserts="0" >
-                    <categories>
-                      <category name="TProductControllerTest.TestShow" />
-                    </categories>
-                  </test-case>
-                  <test-case name="TestIndex" executed="True" result="Success" success="True" time="0.047" asserts="0" >
-                    <categories>
-                      <category name="TProductControllerTest.TestIndex" />
                     </categories>
                   </test-case>
                 </results>
