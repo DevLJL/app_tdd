@@ -8,19 +8,31 @@ uses
   uProduct.Controller.Interfaces;
 
 type
-  [CategoryAttribute('TProductControllerTest')]
   TProductControllerTest = class(TObject)
   private
     FController: IProductController;
     function GenerateProductDTO: TProductDTO;
   public
-    [Setup]    procedure Setup;
-    [TearDown] procedure TearDown;
-    [Test] procedure Store;
-    [Test] procedure Update;
-    [Test] procedure Delete;
-    [Test] procedure Show;
-    [Test] procedure Index;
+    [Setup]
+    procedure Setup;
+
+    [TearDown]
+    procedure TearDown;
+
+    [Test][CategoryAttribute('TProductControllerTest.TestStore')]
+    procedure TestStore;
+
+    [Test][CategoryAttribute('TProductControllerTest.TestUpdate')]
+    procedure TestUpdate;
+
+    [Test][CategoryAttribute('TProductControllerTest.TestDelete')]
+    procedure TestDelete;
+
+    [Test][CategoryAttribute('TProductControllerTest.TestShow')]
+    procedure TestShow;
+
+    [Test][CategoryAttribute('TProductControllerTest.TestIndex')]
+    procedure TestIndex;
   end;
 
 implementation
@@ -38,7 +50,7 @@ uses
 
 { TProductControllerTest }
 
-procedure TProductControllerTest.Delete;
+procedure TProductControllerTest.TestDelete;
 var
   lInput: Shared<TProductDTO>;
   lFound: Shared<TProductDTO>;
@@ -63,7 +75,7 @@ begin
   Result.note  := 'Observação: ' + NextUUID;
 end;
 
-procedure TProductControllerTest.Index;
+procedure TProductControllerTest.TestIndex;
 const
   L_DELETE_ALL = 'delete from product';
 var
@@ -93,7 +105,7 @@ begin
   FController := TControllerFactory.Product;
 end;
 
-procedure TProductControllerTest.Show;
+procedure TProductControllerTest.TestShow;
 var
   lStoredId: Either<String, Int64>;
   lInput: Shared<TProductDTO>;
@@ -113,7 +125,7 @@ begin
   FController.Delete(lStoredId.Right);
 end;
 
-procedure TProductControllerTest.Store;
+procedure TProductControllerTest.TestStore;
 var
   lInput: Shared<TProductDTO>;
   lStoredId: Either<String, Int64>;
@@ -135,7 +147,7 @@ begin
   TConnectionFactory.Make.MakeQry.ExecSQL(L_DELETE_ALL);
 end;
 
-procedure TProductControllerTest.Update;
+procedure TProductControllerTest.TestUpdate;
 var
   lStoredId: Either<String, Int64>;
   lInput: Shared<TProductDTO>;

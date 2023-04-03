@@ -1,7 +1,7 @@
 program app_tdd_tests;
 
 // Rodar teste específico no terminal:
-//./crud_test.exe --include:TProductControllerTest
+//./crud_test.exe --include:TProductControllerTest.TestStore
 {$IFNDEF TESTINSIGHT}
 {$APPTYPE CONSOLE}
 {$ENDIF}{$STRONGLINKTYPES ON}
